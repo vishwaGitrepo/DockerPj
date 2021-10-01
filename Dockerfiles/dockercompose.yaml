@@ -1,0 +1,15 @@
+version: '3'
+services:
+  vproapp:
+    image: vishwalin/vprofileapp:V1
+    ports:
+      - "8080:8080"
+    volumes:
+      - vproappdata:/usr/local/tomcat/webapps/
+    
+  vproweb:
+    image: vishwalin/vprofileweb:V1
+    ports:
+      - "80:80"
+volumes:
+  vproappdata: {}
